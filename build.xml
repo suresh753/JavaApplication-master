@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="java-junit-template-project" default="run" basedir=".">
+<project name="java-junit-template-project" default="Jar" basedir=".">
   <property name="version" value="1.2"/>
   <property name="main.build.dir" value="build/main" />
   <property name="main.src.dir" value="src" />
@@ -19,6 +19,7 @@
 <--
 -->
   <target name="test" depends="clean, run" />
+  
   <target name="Jar" depends="compile">
         <mkdir dir="./build/jar"/>
         <jar destfile="./build/jar/Project.jar" basedir="${main.build.dir}">
@@ -29,6 +30,7 @@
             </manifest>
         </jar>
     </target>
+
   <target name="compile" depends="clean">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
@@ -36,6 +38,7 @@
     </javac>
   </target>
 
+<!--
   <target name="build" depends="Jar">
     <mkdir dir="${test.build.dir}"/>
     
@@ -44,9 +47,11 @@
     </javac>
     <echo message="Build done" />
   </target>
+  -->
 
   <!-- Test and build all files  -->
   <!-- To run this: use "ant" (default) or "ant run" -->
+  <!--
   <target name="run" depends="build">
     <junit printsummary="on" haltonfailure="no">
         <classpath>
@@ -61,7 +66,8 @@
             
         </batchtest>
     </junit>
-  </target>
+  </target>  
+  -->
 
   <!-- delete all class files -->
   <!-- To run this: use "ant clean" -->
