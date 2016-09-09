@@ -16,9 +16,6 @@
     <pathelement location="lib/mysql-connector-java-5.1.38-bin.jar"/>
     <path refid="classpath.base" />
   </path>
-<--
--->
-  <target name="test" depends="clean, run" />
   
   <target name="Jar" depends="compile">
         <mkdir dir="./build/jar"/>
@@ -29,7 +26,7 @@
                 <attribute name="Implementation-Version" value="${version}"/>
             </manifest>
         </jar>
-    </target>
+  </target>
 
   <target name="compile" depends="clean">
     <mkdir dir="${main.build.dir}"/>
@@ -37,38 +34,7 @@
       <classpath refid="classpath.base"/>
     </javac>
   </target>
-
-<!--
-  <target name="build" depends="Jar">
-    <mkdir dir="${test.build.dir}"/>
-    
-    <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
-        <classpath refid="classpath.test"/>
-    </javac>
-    <echo message="Build done" />
-  </target>
-  -->
-
-  <!-- Test and build all files  -->
-  <!-- To run this: use "ant" (default) or "ant run" -->
-  <!--
-  <target name="run" depends="build">
-    <junit printsummary="on" haltonfailure="no">
-        <classpath>
-          <path refid="classpath.test" />
-          <pathelement location="${test.build.dir}"/>
-        </classpath>
-        <formatter type="brief" usefile="false" />
-        <formatter type="xml"/>
-        <formatter type="plain"/>
-        <batchtest>
-            <fileset dir="${test.src.dir}" includes="**/*Test*.java" />
-            
-        </batchtest>
-    </junit>
-  </target>  
-  -->
-
+  
   <!-- delete all class files -->
   <!-- To run this: use "ant clean" -->
   <target name="clean">
