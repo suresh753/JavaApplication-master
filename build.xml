@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- this is -->
-<project name="java-junit-template-project" default="run" basedir=".">
+<project name="java-junit-template-project" default="Jar" basedir=".">
   <property name="version" value="1.2"/>
   <property name="main.build.dir" value="build/main" />
   <property name="main.src.dir" value="src" />
@@ -28,7 +28,7 @@
             </manifest>
         </jar>
   </target>
-  <!-- 31-53-->
+  <!-- 
   <target name="build" depends="Jar">
     <mkdir dir="${test.build.dir}" />
     <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
@@ -51,7 +51,7 @@
         </batchtest>
     </junit>
   </target>
-
+-->
   <target name="compile" depends="clean">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
