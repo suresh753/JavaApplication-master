@@ -23,18 +23,9 @@ public class Databaseconnection {
 			 connection = DriverManager.getConnection(database_url,username,password);
 			
 		
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			
+			System.out.print(e);
 		} 
 		return connection;
 	}
