@@ -7,6 +7,7 @@
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="test" />
 
+<!--
   <path id="classpath.base" >
     <pathelement location="lib/mysql-connector-java-5.1.38-bin.jar"/>
   </path>
@@ -17,7 +18,7 @@
     <pathelement location="lib/mysql-connector-java-5.1.38-bin.jar"/>
     <path refid="classpath.base" />
   </path>
-  
+  -->
   <target name="Jar" depends="compile">
         <mkdir dir="./build/jar"/>
         <jar destfile="./build/jar/Project.jar" basedir="${main.build.dir}">
